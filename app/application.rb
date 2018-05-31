@@ -12,7 +12,6 @@ class Application
         resp.write "We don't have that item"
         resp.status = 400
       else
-        item = @@items.find {|i| i.name == item_name}
         resp.write "#{item.price}"
       end
     else
